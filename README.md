@@ -33,12 +33,13 @@ EVM Bytecodes Check is a specialized tool designed to analyze smart contracts on
      "ethApiKey": "YOUR_ETHERSCAN_API_KEY"
    }
    ```
-3. Run the script to start the evaluation:
+3. (Optional) Modify the `transactionEvalCount` variable in the script to set a custom threshold for the minimum transaction count required for evaluation. Only contracts with a transaction count higher than this value will be checked. Default value is 10.
+4. Run the script to start the evaluation:
    ```bash
    node sc_checker.js
    ```
 
-The script will read the contract addresses from the `addresses.txt` file, utilize the configurations from `secrets.json`, and evaluate the contracts, checking for duplicate bytecodes and providing progress updates.
+The script will read the contract addresses from the `addresses.txt` file, utilize the configurations from `secrets.json`, and evaluate the contracts based on the specified transaction count threshold, checking for duplicate bytecodes and providing progress updates.
 
 ## Features
 
